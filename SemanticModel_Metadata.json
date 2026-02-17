@@ -1,0 +1,562 @@
+{
+  "model_name": "Sample - Superstore",
+  "timestamp": "2025-11-25T13:50:14.791576",
+  "tables": {
+    "Sample - Superstore": {
+      "column_count": 71,
+      "columns": [
+        {
+          "name": "Row ID",
+          "caption": "Row ID",
+          "datatype": "integer",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Order ID",
+          "caption": "Order ID",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Order Date",
+          "caption": "Order Date",
+          "datatype": "date",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Ship Date",
+          "caption": "Ship Date",
+          "datatype": "date",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Ship Mode",
+          "caption": "Ship Mode",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Customer ID",
+          "caption": "Customer ID",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Customer Name",
+          "caption": "Customer Name",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Segment",
+          "caption": "Segment",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Country/Region",
+          "caption": "Country/Region",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "City",
+          "caption": "City",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "State/Province",
+          "caption": "State/Province",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Postal Code",
+          "caption": "Postal Code",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Region",
+          "caption": "Region",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Product ID",
+          "caption": "Product ID",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Category",
+          "caption": "Category",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Sub-Category",
+          "caption": "Sub-Category",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Product Name",
+          "caption": "Product Name",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Sales",
+          "caption": "Sales",
+          "datatype": "real",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Quantity",
+          "caption": "Quantity",
+          "datatype": "integer",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Discount",
+          "caption": "Discount",
+          "datatype": "real",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Profit",
+          "caption": "Profit",
+          "datatype": "real",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Regional Manager",
+          "caption": "Regional Manager",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Region",
+          "caption": "Region",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Order ID",
+          "caption": "Order ID",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Returned",
+          "caption": "Returned",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "[Calculation_1368249927221915648]",
+          "caption": "Profit Ratio",
+          "datatype": "real",
+          "role": "measure",
+          "type": "quantitative"
+        },
+        {
+          "name": "[City]",
+          "caption": "[City]",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "[Country/Region]",
+          "caption": "[Country/Region]",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "[Customer ID]",
+          "caption": "[Customer ID]",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "[Customer Name]",
+          "caption": "[Customer Name]",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "[Order ID (Returns)]",
+          "caption": "[Order ID (Returns)]",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "[Postal Code]",
+          "caption": "[Postal Code]",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "[Product ID]",
+          "caption": "[Product ID]",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "[Product Name (group)]",
+          "caption": "Manufacturer",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "[Product Name]",
+          "caption": "[Product Name]",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "[Profit (bin)]",
+          "caption": "Profit (bin)",
+          "datatype": "integer",
+          "role": "dimension",
+          "type": "ordinal"
+        },
+        {
+          "name": "[Profit]",
+          "caption": "[Profit]",
+          "datatype": "real",
+          "role": "measure",
+          "type": "quantitative"
+        },
+        {
+          "name": "[Region (People)]",
+          "caption": "[Region (People)]",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "[Region]",
+          "caption": "[Region]",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "[Row ID]",
+          "caption": "[Row ID]",
+          "datatype": "integer",
+          "role": "dimension",
+          "type": "ordinal"
+        },
+        {
+          "name": "[State/Province]",
+          "caption": "[State/Province]",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "[__tableau_internal_object_id__].[Orders_ECFCA1FB690A41FE803BC071773BA862]",
+          "caption": "Orders",
+          "datatype": "table",
+          "role": "measure",
+          "type": "quantitative"
+        },
+        {
+          "name": "[__tableau_internal_object_id__].[People_D73023733B004CC1B3CB1ACF62F4A965]",
+          "caption": "People",
+          "datatype": "table",
+          "role": "measure",
+          "type": "quantitative"
+        },
+        {
+          "name": "[__tableau_internal_object_id__].[Returns_2AA0FE4D737A4F63970131D0E7480A03]",
+          "caption": "Returns",
+          "datatype": "table",
+          "role": "measure",
+          "type": "quantitative"
+        },
+        {
+          "name": "[Parameter 1]",
+          "caption": "Top Customers",
+          "datatype": "integer",
+          "role": "measure",
+          "type": "quantitative"
+        },
+        {
+          "name": "[Parameter 2]",
+          "caption": "Profit Bin Size",
+          "datatype": "integer",
+          "role": "measure",
+          "type": "quantitative"
+        },
+        {
+          "name": "Row ID",
+          "caption": "Row ID",
+          "datatype": "integer",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Order ID",
+          "caption": "Order ID",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Order Date",
+          "caption": "Order Date",
+          "datatype": "date",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Ship Date",
+          "caption": "Ship Date",
+          "datatype": "date",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Ship Mode",
+          "caption": "Ship Mode",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Customer ID",
+          "caption": "Customer ID",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Customer Name",
+          "caption": "Customer Name",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Segment",
+          "caption": "Segment",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Country/Region",
+          "caption": "Country/Region",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "City",
+          "caption": "City",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "State/Province",
+          "caption": "State/Province",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Postal Code",
+          "caption": "Postal Code",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Region",
+          "caption": "Region",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Product ID",
+          "caption": "Product ID",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Category",
+          "caption": "Category",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Sub-Category",
+          "caption": "Sub-Category",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Product Name",
+          "caption": "Product Name",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Sales",
+          "caption": "Sales",
+          "datatype": "real",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Quantity",
+          "caption": "Quantity",
+          "datatype": "integer",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Discount",
+          "caption": "Discount",
+          "datatype": "real",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Profit",
+          "caption": "Profit",
+          "datatype": "real",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Regional Manager",
+          "caption": "Regional Manager",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Region",
+          "caption": "Region",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Order ID",
+          "caption": "Order ID",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        },
+        {
+          "name": "Returned",
+          "caption": "Returned",
+          "datatype": "string",
+          "role": "dimension",
+          "type": "nominal"
+        }
+      ],
+      "relationships": []
+    }
+  },
+  "measures": {
+    "[Parameter 1]": {
+      "caption": "Top Customers",
+      "formula": "5",
+      "datasource": "Sample - Superstore"
+    },
+    "[Parameter 2]": {
+      "caption": "Profit Bin Size",
+      "formula": "200",
+      "datasource": "Sample - Superstore"
+    },
+    "[Calculation_1368249927221915648]": {
+      "caption": "Profit Ratio",
+      "formula": "SUM([Profit])/SUM([Sales])",
+      "datasource": "Sample - Superstore"
+    },
+    "[Profit (bin)]": {
+      "caption": "Profit (bin)",
+      "formula": "[Profit]",
+      "datasource": "Sample - Superstore"
+    }
+  },
+  "parameters": {
+    "[Parameter 1]": {
+      "caption": "Top Customers",
+      "datatype": "integer",
+      "value": "5",
+      "domain_type": "range",
+      "range": {
+        "min": "5",
+        "max": "20",
+        "granularity": "5"
+      }
+    },
+    "[Parameter 2]": {
+      "caption": "Profit Bin Size",
+      "datatype": "integer",
+      "value": "200",
+      "domain_type": "range",
+      "range": {
+        "min": "50",
+        "max": "200",
+        "granularity": "50"
+      }
+    }
+  },
+  "connections": {
+    "Sample - Superstore": {
+      "name": "excel-direct.0ozsbj20cdelf51evvdk71kugqg0",
+      "class": "excel-direct",
+      "filename": "C:/Users/Sriram Mandalapu/OneDrive - Sparity Soft Technologies Pvt Ltd/Documents/My Tableau Repository/Datasources/2025.2/en_US-US/Sample - Superstore.xls"
+    }
+  }
+}
