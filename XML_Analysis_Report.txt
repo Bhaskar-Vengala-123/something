@@ -1,0 +1,390 @@
+================================================================================
+TABLEAU XML TO POWER BI - DETAILED ANALYSIS REPORT
+================================================================================
+
+Generated: 2025-11-25 13:50:14
+
+EXECUTIVE SUMMARY
+--------------------------------------------------------------------------------
+Data Source: Sample - Superstore
+Total Tables: 7
+Total Columns: 73
+Calculations/Measures: 4
+Parameters: 2
+
+TABLES STRUCTURE
+--------------------------------------------------------------------------------
+
+Table: Sample - Superstore
+  Columns: 71
+    • Row ID (Row ID)
+      Type: integer | Role: dimension
+    • Order ID (Order ID)
+      Type: string | Role: dimension
+    • Order Date (Order Date)
+      Type: date | Role: dimension
+    • Ship Date (Ship Date)
+      Type: date | Role: dimension
+    • Ship Mode (Ship Mode)
+      Type: string | Role: dimension
+    • Customer ID (Customer ID)
+      Type: string | Role: dimension
+    • Customer Name (Customer Name)
+      Type: string | Role: dimension
+    • Segment (Segment)
+      Type: string | Role: dimension
+    • Country/Region (Country/Region)
+      Type: string | Role: dimension
+    • City (City)
+      Type: string | Role: dimension
+    • State/Province (State/Province)
+      Type: string | Role: dimension
+    • Postal Code (Postal Code)
+      Type: string | Role: dimension
+    • Region (Region)
+      Type: string | Role: dimension
+    • Product ID (Product ID)
+      Type: string | Role: dimension
+    • Category (Category)
+      Type: string | Role: dimension
+    • Sub-Category (Sub-Category)
+      Type: string | Role: dimension
+    • Product Name (Product Name)
+      Type: string | Role: dimension
+    • Sales (Sales)
+      Type: real | Role: dimension
+    • Quantity (Quantity)
+      Type: integer | Role: dimension
+    • Discount (Discount)
+      Type: real | Role: dimension
+    • Profit (Profit)
+      Type: real | Role: dimension
+    • Regional Manager (Regional Manager)
+      Type: string | Role: dimension
+    • Region (Region)
+      Type: string | Role: dimension
+    • Order ID (Order ID)
+      Type: string | Role: dimension
+    • Returned (Returned)
+      Type: string | Role: dimension
+    • Profit Ratio ([Calculation_1368249927221915648])
+      Type: real | Role: measure
+    • [City] ([City])
+      Type: string | Role: dimension
+    • [Country/Region] ([Country/Region])
+      Type: string | Role: dimension
+    • [Customer ID] ([Customer ID])
+      Type: string | Role: dimension
+    • [Customer Name] ([Customer Name])
+      Type: string | Role: dimension
+    • [Order ID (Returns)] ([Order ID (Returns)])
+      Type: string | Role: dimension
+    • [Postal Code] ([Postal Code])
+      Type: string | Role: dimension
+    • [Product ID] ([Product ID])
+      Type: string | Role: dimension
+    • Manufacturer ([Product Name (group)])
+      Type: string | Role: dimension
+    • [Product Name] ([Product Name])
+      Type: string | Role: dimension
+    • Profit (bin) ([Profit (bin)])
+      Type: integer | Role: dimension
+    • [Profit] ([Profit])
+      Type: real | Role: measure
+    • [Region (People)] ([Region (People)])
+      Type: string | Role: dimension
+    • [Region] ([Region])
+      Type: string | Role: dimension
+    • [Row ID] ([Row ID])
+      Type: integer | Role: dimension
+    • [State/Province] ([State/Province])
+      Type: string | Role: dimension
+    • Orders ([__tableau_internal_object_id__].[Orders_ECFCA1FB690A41FE803BC071773BA862])
+      Type: table | Role: measure
+    • People ([__tableau_internal_object_id__].[People_D73023733B004CC1B3CB1ACF62F4A965])
+      Type: table | Role: measure
+    • Returns ([__tableau_internal_object_id__].[Returns_2AA0FE4D737A4F63970131D0E7480A03])
+      Type: table | Role: measure
+    • Top Customers ([Parameter 1])
+      Type: integer | Role: measure
+    • Profit Bin Size ([Parameter 2])
+      Type: integer | Role: measure
+    • Row ID (Row ID)
+      Type: integer | Role: dimension
+    • Order ID (Order ID)
+      Type: string | Role: dimension
+    • Order Date (Order Date)
+      Type: date | Role: dimension
+    • Ship Date (Ship Date)
+      Type: date | Role: dimension
+    • Ship Mode (Ship Mode)
+      Type: string | Role: dimension
+    • Customer ID (Customer ID)
+      Type: string | Role: dimension
+    • Customer Name (Customer Name)
+      Type: string | Role: dimension
+    • Segment (Segment)
+      Type: string | Role: dimension
+    • Country/Region (Country/Region)
+      Type: string | Role: dimension
+    • City (City)
+      Type: string | Role: dimension
+    • State/Province (State/Province)
+      Type: string | Role: dimension
+    • Postal Code (Postal Code)
+      Type: string | Role: dimension
+    • Region (Region)
+      Type: string | Role: dimension
+    • Product ID (Product ID)
+      Type: string | Role: dimension
+    • Category (Category)
+      Type: string | Role: dimension
+    • Sub-Category (Sub-Category)
+      Type: string | Role: dimension
+    • Product Name (Product Name)
+      Type: string | Role: dimension
+    • Sales (Sales)
+      Type: real | Role: dimension
+    • Quantity (Quantity)
+      Type: integer | Role: dimension
+    • Discount (Discount)
+      Type: real | Role: dimension
+    • Profit (Profit)
+      Type: real | Role: dimension
+    • Regional Manager (Regional Manager)
+      Type: string | Role: dimension
+    • Region (Region)
+      Type: string | Role: dimension
+    • Order ID (Order ID)
+      Type: string | Role: dimension
+    • Returned (Returned)
+      Type: string | Role: dimension
+
+
+CALCULATIONS & MEASURES
+--------------------------------------------------------------------------------
+
+Top Customers
+  Name: [Parameter 1]
+  Formula: 5
+  Datasource: Sample - Superstore
+
+Profit Bin Size
+  Name: [Parameter 2]
+  Formula: 200
+  Datasource: Sample - Superstore
+
+Profit Ratio
+  Name: [Calculation_1368249927221915648]
+  Formula: SUM([Profit])/SUM([Sales])
+  Datasource: Sample - Superstore
+
+Profit (bin)
+  Name: [Profit (bin)]
+  Formula: [Profit]
+  Datasource: Sample - Superstore
+
+
+PARAMETERS
+--------------------------------------------------------------------------------
+
+Top Customers
+  Name: [Parameter 1]
+  Type: integer
+  Default Value: 5
+  Range: 5 to 20
+  Granularity: 5
+
+Profit Bin Size
+  Name: [Parameter 2]
+  Type: integer
+  Default Value: 200
+  Range: 50 to 200
+  Granularity: 50
+
+
+DATA CONNECTIONS
+--------------------------------------------------------------------------------
+
+Sample - Superstore
+  Type: excel-direct
+  Source: C:/Users/Sriram Mandalapu/OneDrive - Sparity Soft Technologies Pvt Ltd/Documents/My Tableau Repository/Datasources/2025.2/en_US-US/Sample - Superstore.xls
+
+
+COLUMN METADATA
+--------------------------------------------------------------------------------
+
+[Row ID]
+  Remote Name: Row ID
+  Data Type: integer
+  Aggregation: Sum
+  Parent Table: [Orders]
+  Nullable: true
+
+[Order ID]
+  Remote Name: Order ID
+  Data Type: string
+  Aggregation: Count
+  Parent Table: [Orders]
+  Nullable: true
+
+[Order Date]
+  Remote Name: Order Date
+  Data Type: date
+  Aggregation: Year
+  Parent Table: [Orders]
+  Nullable: true
+
+[Ship Date]
+  Remote Name: Ship Date
+  Data Type: date
+  Aggregation: Year
+  Parent Table: [Orders]
+  Nullable: true
+
+[Ship Mode]
+  Remote Name: Ship Mode
+  Data Type: string
+  Aggregation: Count
+  Parent Table: [Orders]
+  Nullable: true
+
+[Customer ID]
+  Remote Name: Customer ID
+  Data Type: string
+  Aggregation: Count
+  Parent Table: [Orders]
+  Nullable: true
+
+[Customer Name]
+  Remote Name: Customer Name
+  Data Type: string
+  Aggregation: Count
+  Parent Table: [Orders]
+  Nullable: true
+
+[Segment]
+  Remote Name: Segment
+  Data Type: string
+  Aggregation: Count
+  Parent Table: [Orders]
+  Nullable: true
+
+[Country/Region]
+  Remote Name: Country/Region
+  Data Type: string
+  Aggregation: Count
+  Parent Table: [Orders]
+  Nullable: true
+
+[City]
+  Remote Name: City
+  Data Type: string
+  Aggregation: Count
+  Parent Table: [Orders]
+  Nullable: true
+
+[State/Province]
+  Remote Name: State/Province
+  Data Type: string
+  Aggregation: Count
+  Parent Table: [Orders]
+  Nullable: true
+
+[Postal Code]
+  Remote Name: Postal Code
+  Data Type: string
+  Aggregation: Count
+  Parent Table: [Orders]
+  Nullable: true
+
+[Region]
+  Remote Name: Region
+  Data Type: string
+  Aggregation: Count
+  Parent Table: [Orders]
+  Nullable: true
+
+[Product ID]
+  Remote Name: Product ID
+  Data Type: string
+  Aggregation: Count
+  Parent Table: [Orders]
+  Nullable: true
+
+[Category]
+  Remote Name: Category
+  Data Type: string
+  Aggregation: Count
+  Parent Table: [Orders]
+  Nullable: true
+
+[Sub-Category]
+  Remote Name: Sub-Category
+  Data Type: string
+  Aggregation: Count
+  Parent Table: [Orders]
+  Nullable: true
+
+[Product Name]
+  Remote Name: Product Name
+  Data Type: string
+  Aggregation: Count
+  Parent Table: [Orders]
+  Nullable: true
+
+[Sales]
+  Remote Name: Sales
+  Data Type: real
+  Aggregation: Sum
+  Parent Table: [Orders]
+  Nullable: true
+
+[Quantity]
+  Remote Name: Quantity
+  Data Type: integer
+  Aggregation: Sum
+  Parent Table: [Orders]
+  Nullable: true
+
+[Discount]
+  Remote Name: Discount
+  Data Type: real
+  Aggregation: Sum
+  Parent Table: [Orders]
+  Nullable: true
+
+[Profit]
+  Remote Name: Profit
+  Data Type: real
+  Aggregation: Sum
+  Parent Table: [Orders]
+  Nullable: true
+
+[Regional Manager]
+  Remote Name: Regional Manager
+  Data Type: string
+  Aggregation: Count
+  Parent Table: [People]
+  Nullable: true
+
+[Region (People)]
+  Remote Name: Region
+  Data Type: string
+  Aggregation: Count
+  Parent Table: [People]
+  Nullable: true
+
+[Order ID (Returns)]
+  Remote Name: Order ID
+  Data Type: string
+  Aggregation: Count
+  Parent Table: [Returns]
+  Nullable: true
+
+[Returned]
+  Remote Name: Returned
+  Data Type: string
+  Aggregation: Count
+  Parent Table: [Returns]
+  Nullable: true

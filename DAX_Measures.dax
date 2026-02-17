@@ -1,0 +1,60 @@
+
+-- DAX MEASURES FOR POWER BI
+-- Copy and paste these into your Power BI Desktop
+
+// Sales Measures
+Total Sales = SUM(Orders[Sales])
+
+Total Profit = SUM(Orders[Profit])
+
+Profit Ratio = DIVIDE(SUM(Orders[Profit]), SUM(Orders[Sales]), 0)
+
+Average Order Value = DIVIDE(SUM(Orders[Sales]), DISTINCTCOUNT(Orders[Order ID]), 0)
+
+// Quantity Measures
+Total Quantity = SUM(Orders[Quantity])
+
+Average Quantity = AVERAGE(Orders[Quantity])
+
+// Discount Analysis
+Average Discount = AVERAGE(Orders[Discount])
+
+Total Discount Amount = SUM(Orders[Sales] * Orders[Discount])
+
+// Returns Analysis
+Total Returns = COUNTROWS(Returns)
+
+Return Rate = DIVIDE(COUNTROWS(Returns), DISTINCTCOUNT(Orders[Order ID]), 0)
+
+// Customer Analysis
+Total Customers = DISTINCTCOUNT(Orders[Customer ID])
+
+Orders Count = DISTINCTCOUNT(Orders[Order ID])
+
+// Time Measures
+First Order Date = MIN(Orders[Order Date])
+
+Last Order Date = MAX(Orders[Order Date])
+
+// Segment Analysis
+Consumer Sales = CALCULATE([Total Sales], Orders[Segment] = "Consumer")
+
+Corporate Sales = CALCULATE([Total Sales], Orders[Segment] = "Corporate")
+
+Home Office Sales = CALCULATE([Total Sales], Orders[Segment] = "Home Office")
+
+// Regional Analysis
+West Region Sales = CALCULATE([Total Sales], Orders[Region] = "West")
+
+East Region Sales = CALCULATE([Total Sales], Orders[Region] = "East")
+
+Central Region Sales = CALCULATE([Total Sales], Orders[Region] = "Central")
+
+South Region Sales = CALCULATE([Total Sales], Orders[Region] = "South")
+
+// Category Analysis
+Furniture Sales = CALCULATE([Total Sales], Orders[Category] = "Furniture")
+
+Office Supplies Sales = CALCULATE([Total Sales], Orders[Category] = "Office Supplies")
+
+Technology Sales = CALCULATE([Total Sales], Orders[Category] = "Technology")

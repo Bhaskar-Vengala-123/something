@@ -1,0 +1,80 @@
+================================================================================
+POWER BI RELATIONSHIPS SETUP GUIDE
+================================================================================
+
+RELATIONSHIPS TO CREATE IN POWER BI
+--------------------------------------------------------------------------------
+
+1. ORDERS ↔ PEOPLE (Regional Manager)
+   From Table: Orders
+   From Column: Region
+   To Table: People
+   To Column: Region
+   Cardinality: Many-to-One (*:1)
+   Direction: Single (from Orders)
+   Purpose: Link sales orders to regional managers
+
+2. ORDERS ↔ RETURNS (Order Returns)
+   From Table: Returns
+   From Column: Order ID
+   To Table: Orders
+   To Column: Order ID
+   Cardinality: Many-to-One (*:1)
+   Direction: Single (from Returns)
+   Purpose: Link returned orders to original orders
+
+RECOMMENDED VISUALIZATIONS
+--------------------------------------------------------------------------------
+
+Sales Analysis:
+  • Total Sales by Category (Card/KPI)
+  • Sales by Region (Map/Clustered Bar Chart)
+  • Sales Trend Over Time (Line Chart)
+  • Sales by Product (Horizontal Bar Chart)
+
+Profitability Analysis:
+  • Total Profit (Card)
+  • Profit Ratio (Gauge Chart)
+  • Profit by Segment (Pie Chart)
+  • Profit by Region (Map)
+
+Customer Analysis:
+  • Top 10 Customers by Sales (Horizontal Bar Chart)
+  • Customers by Segment (Donut Chart)
+  • Customer Count by Region (Card/Visual)
+
+Returns Analysis:
+  • Total Returns (Card)
+  • Return Rate by Category (Clustered Bar Chart)
+  • Returns by Sub-Category (Treemap)
+
+RECOMMENDED MEASURES (DAX)
+--------------------------------------------------------------------------------
+
+Total Sales =
+  SUM(Orders[Sales])
+
+Total Profit =
+  SUM(Orders[Profit])
+
+Profit Ratio =
+  DIVIDE(SUM(Orders[Profit]), SUM(Orders[Sales]))
+
+Total Orders =
+  DISTINCTCOUNT(Orders[Order ID])
+
+Average Order Value =
+  DIVIDE(SUM(Orders[Sales]), DISTINCTCOUNT(Orders[Order ID]))
+
+Total Returns =
+  COUNTROWS(Returns)
+
+Return Rate =
+  DIVIDE(COUNTROWS(Returns), DISTINCTCOUNT(Orders[Order ID]))
+
+Average Discount =
+  AVERAGE(Orders[Discount])
+
+Quantity Sold =
+  SUM(Orders[Quantity])
+
