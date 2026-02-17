@@ -1,0 +1,24 @@
+{
+  "relationships": [
+    {
+      "name": "Orders_People_Region",
+      "from_table": "Orders",
+      "from_column": "Region",
+      "to_table": "People",
+      "to_column": "Region",
+      "cardinality": "many-to-one",
+      "direction": "single",
+      "description": "Link Orders to Regional Managers"
+    },
+    {
+      "name": "Returns_Orders",
+      "from_table": "Returns",
+      "from_column": "Order ID",
+      "to_table": "Orders",
+      "to_column": "Order ID",
+      "cardinality": "many-to-one",
+      "direction": "single",
+      "description": "Link Returns to Original Orders"
+    }
+  ]
+}

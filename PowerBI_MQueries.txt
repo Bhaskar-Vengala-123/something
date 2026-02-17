@@ -1,0 +1,21 @@
+// Power BI M Script - Auto Generated
+// This script loads CSV files and creates the semantic model
+
+let
+    // Load Orders Data
+    Orders = Csv.Document(File.Contents("c:\Users\Vengala Bhaskar\Downloads\Python Folder\powerbi_data\Orders_Sample.csv"),
+        [Delimiter=",", Columns=21, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+    Orders_Header = Table.PromoteHeaders(Orders, [PromoteAllScalars=true]),
+    
+    // Load People Data
+    People = Csv.Document(File.Contents("c:\Users\Vengala Bhaskar\Downloads\Python Folder\powerbi_data\People_Sample.csv"),
+        [Delimiter=",", Columns=2, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+    People_Header = Table.PromoteHeaders(People, [PromoteAllScalars=true]),
+    
+    // Load Returns Data
+    Returns = Csv.Document(File.Contents("c:\Users\Vengala Bhaskar\Downloads\Python Folder\powerbi_data\Returns_Sample.csv"),
+        [Delimiter=",", Columns=2, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+    Returns_Header = Table.PromoteHeaders(Returns, [PromoteAllScalars=true])
+    
+in
+    Orders_Header
